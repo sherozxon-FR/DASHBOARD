@@ -39,7 +39,7 @@ function RootLayout() {
                 <nav className={styles.nav}>
                     <NavLink to="/" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>
                         <MdDashboard className={styles.navIcon} />
-                        {sidebarOpen && <span>Dashboard</span>}
+                        {sidebarOpen && <span>BoshSahifa</span>}
                     </NavLink>
 
                     <NavLink to="/azolar" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>
