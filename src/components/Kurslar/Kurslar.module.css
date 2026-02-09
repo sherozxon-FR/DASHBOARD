@@ -1,0 +1,160 @@
+/* Kurslar.module.css */
+
+.Kurslar {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+
+}
+
+
+.kurslarContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.Kurslar h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Kurslar h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    border-radius: 2px;
+}
+
+.kurslarContent {
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 30px; */
+    padding: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kursCart {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    max-width: 350px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+.kursCart:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.imgCont {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+}
+
+
+
+
+
+.imgCont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.kursCart:hover .imgCont img {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.txtCont {
+    padding: 24px;
+    background: #fff;
+}
+
+.txtCont p {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 12px 0;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.kursCart:hover .txtCont p {
+    color: #3498db;
+}
+
+.txtCont span {
+    font-size: 15px;
+    color: #7f8c8d;
+    line-height: 1.7;
+    display: block;
+    font-weight: 400;
+}
+
+/* Responsive dizayn */
+@media (max-width: 768px) {
+    .Kurslar {
+        padding: 40px 15px;
+    }
+
+    .Kurslar h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .kurslarContent {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kursCart {
+        max-width: 100%;
+    }
+
+    .txtCont p {
+        font-size: 24px;
+    }
+
+    .txtCont span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Kurslar h1 {
+        font-size: 28px;
+    }
+
+    .imgCont {
+        height: 200px;
+    }
+
+    .txtCont {
+        padding: 18px;
+    }
+}

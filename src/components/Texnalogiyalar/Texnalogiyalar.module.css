@@ -1,0 +1,192 @@
+/* Texnalogiyalar.module.css */
+
+.Texnalogiyalar {
+    
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.texnalogContent{
+    
+}
+
+.Texnalogiyalar h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 60px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.Texnalogiyalar h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.texnalogContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.texnalogCart {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+}
+
+/* .texnalogCart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+} */
+
+
+
+.texnalogCart:hover {
+    transform: translateY(-10px) scale(1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.imgcont {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgcont::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(102, 126, 234, 0.05);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.texnalogCart:hover .imgcont::after {
+    opacity: 1;
+}
+
+.imgcont img {
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center ;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.texnalogCart:hover .imgcont img {
+    transform: scale(1.1) ;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
+.textcont {
+    padding: 25px;
+    background: #fff;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+}
+
+.textcont p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.texnalogCart:hover .textcont p {
+    color: #667eea;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .texnalogContent {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Texnalogiyalar {
+        padding: 40px 15px;
+    }
+
+    .Texnalogiyalar h1 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .texnalogContent {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .imgcont {
+        height: 180px;
+        padding: 20px;
+    }
+
+    .textcont p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Texnalogiyalar h1 {
+        font-size: 28px;
+    }
+
+    .texnalogContent {
+        grid-template-columns: 1fr;
+    }
+
+    .imgcont {
+        height: 160px;
+        padding: 15px;
+    }
+
+    .textcont {
+        padding: 20px;
+    }
+
+    .textcont p {
+        font-size: 18px;
+    }
+}
